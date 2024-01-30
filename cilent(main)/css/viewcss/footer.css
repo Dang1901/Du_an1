@@ -1,0 +1,43 @@
+ /* CSS cho footer */
+ footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    
+  }
+
+  .footer-section {
+    width: calc(33.33% - 20px);
+  }
+
+  .footer-section h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .footer-section p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer-section ul li {
+    margin-bottom: 5px;
+  }
+
+  .footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+  }

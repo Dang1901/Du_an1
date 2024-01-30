@@ -1,4 +1,5 @@
 <?php
+   // ADMIN
    function add_sp($name,$id_loai,$img,$giasp,$soluong,$mota){
        $sql = "insert into sanpham(name,id_loai,img,giasp,soluong,mota) values
        ('$name','$id_loai','$img','$giasp','$soluong','$mota')";
@@ -19,7 +20,7 @@
    }
 
    function edit_sp($id){
-    $sql = "select *from sanpham where id=".$id;
+    $sql = "select * from sanpham where id=".$id;
     $sp = pdo_query_one($sql);
     return $sp;
    }
@@ -36,4 +37,21 @@
     $sql = "delete from sanpham where id=".$id;
     pdo_execute($sql);
    }
+
+   // CILENT
+
+   function list_sp_cilent(){
+    $sql = "select * from sanpham where 1 order by id desc limit 0,9";
+    $list_sp=pdo_query($sql);
+    return $list_sp;
+   }
+
+   function load_dm_sp($id_loai){
+    $sql = "select * from loai where id=".$id_loai;
+    $dm = pdo_query_one($sql);
+    extract($dm);
+    return $tenloai;
+   }
+
+
 ?>

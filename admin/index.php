@@ -113,6 +113,7 @@
                       //Sản phẩm
                        case 'add_sp':   
                         if(isset($_POST["submit"]) && ($_POST["submit"])){
+                          
                           $name = $_POST["name"];
                           $id_loai = $_POST["id_loai"];
                           $giasp = $_POST["giasp"];
@@ -124,7 +125,7 @@
                           $target_file = $target_dir.basename($_FILES["img"]["name"]);
                           move_uploaded_file($_FILES["img"]["tmp_name"],$target_file);
                           
-                          add_sp($id,$name,$id_loai,$img,$giasp,$soluong,$mota);
+                          add_sp($name,$id_loai,$img,$giasp,$soluong,$mota);
                         }
                         $list_dm=list_dm();
                         include "pages/san_pham/add.php";
